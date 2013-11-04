@@ -1,6 +1,6 @@
 ---
 Name: mysql-external
-Cartridge-Short-Name: MYSQL_EXTERNAL
+Cartridge-Short-Name: MYSQL
 Display-Name: MySQL External
 Description: MySQL is a multi-user, multi-threaded SQL database server. This cartridge is used to connect to a database instance running external to OpenShift
 Version: '0'
