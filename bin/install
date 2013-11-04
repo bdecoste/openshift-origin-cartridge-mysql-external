@@ -9,9 +9,9 @@ port="PORT"
 database_name="DATABASENAME"
 
 
-echo "$username" > $OPENSHIFT_MYSQL_DIR/env/OPENSHIFT_MYSQL_DB_USERNAME
-echo "$password" > $OPENSHIFT_MYSQL_DIR/env/OPENSHIFT_MYSQL_DB_PASSWORD
-echo "mysql://$username:$password@$host:$port/" > $OPENSHIFT_MYSQL_DIR/env/OPENSHIFT_MYSQL_DB_URL
+echo "$username" > $OPENSHIFT_MYSQL_EXTENRAL_DIR/env/OPENSHIFT_MYSQL_DB_USERNAME
+echo "$password" > $OPENSHIFT_MYSQL_EXTENRAL_DIR/env/OPENSHIFT_MYSQL_DB_PASSWORD
+echo "mysql://$username:$password@$host:$port/" > $OPENSHIFT_MYSQL_EXTERNAL_DIR/env/OPENSHIFT_MYSQL_DB_URL
 
 echo 'Installing MySQL External'
 
