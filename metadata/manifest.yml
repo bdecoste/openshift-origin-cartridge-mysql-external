@@ -1,0 +1,29 @@
+---
+Name: mysql-external
+Cartridge-Short-Name: MYSQL_EXTERNAL
+Display-Name: MySQL External
+Description: MySQL is a multi-user, multi-threaded SQL database server. This cartridge is used to connect to a database instance running external to OpenShift
+Version: '0'
+License: GPL
+Vendor: Oracle
+Cartridge-Version: 0.1
+Cartridge-Vendor: redhat
+Categories:
+- embedded
+Cart-Data:
+- Key: module_path
+  Type: cart_data
+  Description: Module Path
+Website: http://www.mysql.com
+Help-Topics:
+  Developer Center: https://openshift.redhat.com/community/developers
+Provides:
+- mysql-external
+Endpoints:
+- Private-IP-Name: IP
+  Private-Port-Name: HTTP_PORT
+  Private-Port: 8080
+  Public-Port-Name: HTTP_PROXY_PORT
+Scaling:
+  Min: 1
+  Max: 1

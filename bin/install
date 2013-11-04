@@ -1,0 +1,32 @@
+#!/bin/bash -e
+
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
+username="USERNAME"
+password="PASSWORD"
+host="HOST"
+port="PORT"
+database_name="DATABASENAME"
+
+
+echo "$username" > $OPENSHIFT_MYSQL_DIR/env/OPENSHIFT_MYSQL_DB_USERNAME
+echo "$password" > $OPENSHIFT_MYSQL_DIR/env/OPENSHIFT_MYSQL_DB_PASSWORD
+echo "mysql://$username:$password@$host:$port/" > $OPENSHIFT_MYSQL_DIR/env/OPENSHIFT_MYSQL_DB_URL
+
+echo 'Installing MySQL External'
+
+client_result ""
+client_result "MySQL 5.1 database added.  Please make note of these credentials:"
+client_result ""
+client_result "       Root User: $username"
+client_result "   Root Password: $password"
+client_result "   Database Name: $database_name"
+client_result ""
+
+client_result 'Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/'
+client_result ""
+
+cart_props 'connection_url=mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/'
+cart_props "username=$username"
+cart_props "password=$password"
+cart_props "database_name=$database_name"
