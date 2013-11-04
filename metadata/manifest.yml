@@ -7,7 +7,7 @@ Version: '0'
 License: GPL
 Vendor: Oracle
 Cartridge-Version: 0.1
-Cartridge-Vendor: redhat
+Cartridge-Vendor: community
 Source-Url: http://github.com/bdecoste/openshift-origin-cartridge-mysql-external.git
 Categories:
 - embedded
